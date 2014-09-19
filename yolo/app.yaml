@@ -1,0 +1,54 @@
+application: studentmentoriiitd
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+#root
+- url: /
+  static_files: file/index.html
+  upload: file/index.html
+
+#serve our home page in case index.html is requested
+- url: /about
+  static_files: file/about.html
+  upload: file/about.html
+
+- url: /About
+  static_files: file/about.html
+  upload: file/about.html
+
+- url: /FAQ
+  static_files: file/FAQ.html
+  upload: file/FAQ.html
+
+- url: /team
+  static_files: file/team.html
+  upload: file/team.html
+
+- url: /opinion
+  static_files: file/opinion.html
+  upload: file/opinion.html
+
+
+#specified zip file for download
+#- url: /downloads/AvoydV1_7_1.zip
+#  static_files: static_website/downloads/AvoydV1_7_1.zip
+#  upload: static_website/downloads/AvoydV1_7_1.zip
+
+#all images and support file (css, fonts...): return file if found, 
+#otherwise the default 404 page so it can be handled by sites that link
+#directly to images.
+- url: /(.*\.(gif|png|jpg|ico|bmp|css|js|otf|eot|svg|ttf|woff))
+  static_files: file/\1
+  upload: file/(.*\.(gif|png|jpg|ico|bmp|css|js|otf|eot|svg|ttf|woff))  
+
+#all other urls: return the enkisoftware 404 not found 
+- url: /.*
+  static_files: static_website/notfound.html 
+  upload: static_website/notfound.html
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
