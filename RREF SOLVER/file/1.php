@@ -118,22 +118,6 @@ if ((empty($_POST['row'])) or (empty($_POST['col'])))
 		}
 	}
 	
-	function mr ($a, $row, $col) {
-		
-		$num = $row*$col;
-		$url = "2.php"."?num=".$num;
-		$c = 0;
-		for ($i=0;$i<$row;$i+=1)
-		{
-			for($j=0;$j<$col;$j+=1)
-			{
-				$url.="var".$c."="
-				$url.=$a[$i*6+$j];
-				$url.="&"
-				$c++;
-			}
-		}
-	}
 				
 			echo "<br>";
 
@@ -245,11 +229,29 @@ if ((empty($_POST['row'])) or (empty($_POST['col'])))
 #				echo "</div>";
 #
 #		}
+//Make way for Animesh's code :)
 
-
+	$num = $row*$col;
+		$url = "2.php"."?num=".$num."&";
+		$c = 0;
+		for ($i=0;$i<$row;$i+=1)
+		{
+			for($j=0;$j<$col;$j+=1)
+			{
+				$url.="var".$c."=";
+				$url.=$a[$i*6+$j];
+				$url.="&";
+				$c++;
+			}
+		}
+		
+//Continue kushu's code :)
 ?>
+
+
 <br><br>
-<span class="light" style="font-size: 20pt;">Get the steps<a href = "/clone"> here</span>
+<span class="light" style="font-size: 20pt;">Get the steps<a href = "<?php 	echo $url;
+?>"> here</span>
 
 					<br><br><br>
                         <a href="#contact" class="btn btn-circle page-scroll">
