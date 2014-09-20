@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>RREF Solver</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="./font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="./font1.css" rel="stylesheet" type="text/css">
+    <link href="./font2.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+ 
+    textarea {
+        width: 300px;
+        height: 7em;
+    }
+
+    input, select, textarea {
+        background-color: #234567;
+    }
+
+
+</style>
+
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/">
+                    <i class="fa fa-play-circle"></i>  <span class="light">RREF</span> Solver
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Enter Matrix</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="brand-heading">RREF Solver</h2>
+                        <h3><p class="intro-text">Enter the matrix again for steps</p></h3>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Enter your matrix</h2>
+                <div class="row">
+    <div class = "row">
+    <div class="col-lg-9">
+
+            <form method = "POST" action = "showsteps">
+
+        <div class="row">
+            <div class="col-xs-5"></div>
+            <div class="col-xs-3">
+                <input class = "form-control" type  = "num of row" name = "row" placeholder="rows">
+            </div>
+            <div class="col-xs-3">
+                <input class = "form-control" type  = "row" name = "col" placeholder="num of columns">
+            </div>
+            <div class="col-xs-1"></div>
+            <br><br><br><br>
+            </div>
+
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "0">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "1">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "2">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "3">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "4">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "5">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "6">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "7">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "8">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "9">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "10">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "11">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "12">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "13">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "14">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "15">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "16">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "17">
+            </div>
+            
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "18">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "19">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "20">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "21">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "22">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "23">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "24">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "25">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "26">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "27">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "28">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "29">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-3"></div>
+
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "30">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "31">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "32">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "33">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "34">
+            </div>
+            <div class="col-xs-1">
+            <input class = "form-control" type  = "text" name = "35">
+            </div>
+        </div><br><br>
+            
+        <button type="submit" class="btn btn-default">Submit</button></div>
+        </form>
+        
+
+    </div>
+</body>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Did this help you?</h2>
+                <p>Feel free to thank me :P <br>
+                    Feedback is always welcome :)</p>
+                <p><a href="kushagra14056@iiitd.ac.in">kushagra14056@iiitd.ac.in</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    
+                    <li>
+                        <a href="https://github.com/kush789" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/kushagra1996" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+  
+    <footer>
+        <div class="container text-center">
+        </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="./jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="./jquery.easing.min.js"></script>
+
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="./grayscale.js"></script>
+
+</body>
+
+</html>
